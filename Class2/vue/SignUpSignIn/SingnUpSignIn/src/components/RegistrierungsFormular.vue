@@ -18,6 +18,7 @@
 <script>
 import InputField from './InputField.vue';
 import RegisterButton from './RegisterButton.vue';
+import axios from 'axios';
 
 export default {
   data() {
@@ -28,8 +29,21 @@ export default {
   },
   methods: {
     register() {
-      // Registrierungslogik hier implementieren
-    }
+  const formData = {
+    email: this.email,
+    password: this.password
+  };
+
+  axios.post('http://localhost:8080/api/registrieren', formData)
+    .then(response => {
+      console.log(response.data);
+      // Hier können Sie die Server-Antwort verarbeiten
+    })
+    .catch(error => {
+      console.error(error);
+      // Hier können Sie Fehlerbehandlung durchführen
+    });
+}
   },
   components: {
     InputField,

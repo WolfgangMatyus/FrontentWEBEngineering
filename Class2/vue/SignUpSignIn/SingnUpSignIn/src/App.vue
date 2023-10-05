@@ -1,15 +1,15 @@
 <template>
-  <h1>{{ message }}</h1>
+  <div id="app">
+    <RegistrierungsFormular />
+  </div>
 </template>
 
 <script>
+import RegistrierungsFormular from './components/RegistrierungsFormular.vue';
+
 export default {
-  data() {
-    return {
-      message: 'This is some text'
-    };
+  components: {
+    RegistrierungsFormular
   }
 };
 </script>
-
-<style></style>

@@ -59,5 +59,3 @@ export default {
   margin: 0 auto;
 }
 </style>
-
-Jetzt haben Sie das Registrierungsformular in einzelne Komponenten aufgeteilt, eine für das Input-Feld mit Label (InputField.vue) und eine für den Button (RegisterButton.vue), und sie in Ihrer RegistrierungsFormular.vue-Komponente verwendet. Stellen Sie sicher, dass Sie die neuen Komponenten im gleichen Verzeichnis wie RegistrierungsFormular.vue erstellen und importieren.
